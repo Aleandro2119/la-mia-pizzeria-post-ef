@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model la_mia_pizzeria_static.Models.Pizza
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"]</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+	<link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+</head>
+<body>
+	<header>
+		
+	</header>
+	<div class="container">
+		<main role="main" class="pb-3">
+			<div class="text-center">
+				<h1 class="display-4 pb-5">La pizza @Model.Name</h1>
+				<div class="row">
+					<div class="offset-4 col-4">
+						<div>Pizza @Model.Name</div>
+						<div><img src="@Model.Photo"></img></div>
+						<div>@Model.Description</div>
+						<div>Prezzo : @Model.Price € </div>
+					</div>
+					<div>
+						<a href="@Url.Action("Index", "Pizza")" style="width:150px" class="btn btn-primary">Torna alla Lista</a>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+</body>
