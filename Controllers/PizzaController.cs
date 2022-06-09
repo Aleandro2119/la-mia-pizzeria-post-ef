@@ -31,16 +31,16 @@ namespace la_mia_pizzeria_static.Controllers
         }
 
 
-        public IActionResult Show(int id)
+        public IActionResult Show(Pizza pizza)
         {
-            return View("Show", pizze.pizza[id]);
+            return View("Show", pizza);
         }
 
         public IActionResult CreaNuovaPizza()
         {
             Pizza NuovaPizza = new Pizza()
             {
-                Id = 0,
+                
                 Name = "",
                 Description = "",
                 Price = 0.0,
